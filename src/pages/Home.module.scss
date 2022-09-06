@@ -1,0 +1,25 @@
+$primary : #f8f8f8;
+
+.ionToolbar {
+    border: 1px solid red;
+    background-color: $primary;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.iontitle {
+    // background-color: #fff;
+    // color: #000;
+    // margin: 0;
+    font-size: 20px;
+    display: flex;
+    border: 1px solid #fff;
+} 
+
+.title {
+    font-weight: 600;
+    border: 1px solid #fff;
+    display: inline-flex;
+    height: fit-content;
+}

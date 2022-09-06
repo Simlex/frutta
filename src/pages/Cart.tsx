@@ -1,4 +1,5 @@
 import { FunctionComponent, ReactElement } from "react";
+import customStyle from '../theme/cart.module.scss';
 
 interface HistoryProps {
     
@@ -6,7 +7,10 @@ interface HistoryProps {
  
 const History: FunctionComponent<HistoryProps> = ():ReactElement => {
     return ( 
-        <>History</>
+        <div className="bodyContainer">
+            Cart
+            <p>Here</p>
+        </div>
      );
 }
  
