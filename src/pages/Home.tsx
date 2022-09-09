@@ -1,6 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonSlide, IonSlides, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonToolbar } from '@ionic/react';
 import { JSXElementConstructor, Key, ReactElement, ReactFragment, ReactPortal, useEffect, useState } from 'react';
-import ExploreContainer from '../components/ExploreContainer';
 // import './Home.css';
 import style from '../theme/Home.module.scss';
 import axios from 'axios';
