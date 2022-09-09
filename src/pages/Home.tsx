@@ -91,7 +91,7 @@ const Home: React.FC = () => {
             <>
               {data.map((product: { id: Key | null | undefined; image: string | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; price: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }) => {
                 return (
-                  <div className={style.productContainer__eachProduct} key={product.id}>
+                  (<div className={style.productContainer__eachProduct} key={product.id}>
                     <div className={`${style.like} ${likeProduct && style.filled}`} onClick={(e) => toggleLike}>
                       <svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.6416 3.30514L18 3.67355L18.3584 3.30514C23.0837 -1.55222 31.4222 0.243217 34.4063 6.07086C35.8819 8.95238 36.0622 12.8716 33.7034 17.5253C31.3634 22.1419 26.5255 27.4713 18 33.15C9.47451 27.4719 4.63659 22.1427 2.29661 17.5262C-0.0621745 12.8727 0.118128 8.95337 1.59367 6.07169C4.57785 0.243732 12.9163 -1.55218 17.6416 3.30514Z" stroke="#ED1000" />
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
                   </svg>
                 </div> */}
                     </div>
-                  </div>
+                  </div>)
                 )
               })}
             </>
