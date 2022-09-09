@@ -1,0 +1,205 @@
+$primary: #f8f8f8;
+
+@mixin textReset {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.ionToolbar {
+    // border: 1px solid red;
+    background-color: $primary;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.iontitle {
+    // background-color: #fff;
+    // color: #000;
+    // margin: 0;
+    font-size: 20px;
+    display: flex;
+    // border: 1px solid #fff;
+}
+
+.title {
+    font-weight: 600;
+    // border: 1px solid #fff;
+    display: inline-flex;
+    height: fit-content;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.favouriteSection {
+    @include textReset();
+    position: relative;
+    &__header {
+        color: #222428;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 24px;
+        margin-top: 10px;
+        background-color: #fff;
+        // border: 1px solid #000;
+        h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-size: 500;
+        }
+        p {
+            font-size: 12px;
+            color: #428cff;
+        }
+    }
+    .dropdown {
+        // border: 1px solid #000;
+        color: #428cff;
+        font-size: 12px;
+        // height: auto;
+        max-height: 117.4px;
+        overflow: hidden;
+        animation: slideDown 0.3s ease;
+        position: absolute;
+        top: 33px;
+        width: 100%;
+        @keyframes slideDown {
+            0% {
+                max-height: 0px;
+            }
+            100% {
+                max-height: 117.4px;
+            }
+        }
+        p {
+            padding: 12px 24px;
+            background-color: #fff;
+            border-bottom: 1px solid rgba(#428cff, 0.4);
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+    .dropdownClose {
+        color: #428cff;
+        font-size: 12px;
+        max-height: 117.4px;
+        overflow: hidden;
+        position: absolute;
+        top: 33px;
+        width: 100%;
+        max-height: 0px;
+        animation: slideUp 0.3s ease;
+
+        @keyframes slideUp {
+            0% {
+                max-height: 117.4px;
+            }
+            100% {
+                max-height: 0px;
+            }
+        }
+    }
+    .productContainer {
+        padding: 16px 24px;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        // border: 2px solid #000;
+        margin-top: 10px;
+
+        &__eachProduct {
+            padding: 16px;
+            background-color: #fff;
+            color: #222428;
+            border-radius: 16px;
+            @include textReset();
+            margin: 0 auto;
+            // width: 48%;
+            // border: 2px solid #000;
+            width: 100%;
+            // max-width: 400px;
+
+            .like {
+                float: right;
+                svg {
+                    height: 24px;
+                }
+            }
+            .filled {
+                svg {
+                    fill: #ed1000;
+                }
+            }
+
+            .image {
+                // border: 2px solid #000;
+                display: flex;
+                // width: 150px;
+                // height: 200px;
+                // max-width: 150px;
+                width: 100%;
+
+                img {
+                    height: 100px;
+                    margin: 0 auto;
+                }
+            }
+            .details {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 16px;
+                // border: 1px solid;
+                .productDetails {
+                    width: fit-content;
+                    &__name {
+                        // border: 1px solid;
+                        margin-bottom: 4px;
+                        font-size: 14px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 126px;
+                    }
+                    &__price {
+                        span {
+                            font-weight: 800;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .addCart {
+                    padding: 4px;
+                    // border: 1px solid;
+                    border-radius: 100%;
+                    display: flex;
+                    background-color: rgb(255, 135, 135);
+                    width: 42px;
+                    height: 42px;
+
+                    svg {
+                        height: 20px;
+                        width: 20px;
+                        margin: auto;
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
