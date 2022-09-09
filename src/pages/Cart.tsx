@@ -1,10 +1,5 @@
 import { IonPage, IonContent, IonHeader, IonToolbar } from "@ionic/react";
-import { FunctionComponent, ReactElement } from "react";
 import customStyle from '../theme/Cart.module.scss';
-
-interface CartProps {
-
-}
 
 // const Cart: FunctionComponent<CartProps> = ():ReactElement => {
 const Cart: React.FC = () => {
